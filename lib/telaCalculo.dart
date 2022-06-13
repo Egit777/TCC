@@ -52,7 +52,7 @@ class _TelaCalculoState extends State<TelaCalculo> {
               ),
             ),
             SizedBox(
-              height: 20,
+              height: 10,
             ),
             TextField(
               controller: _controllerLitros,
