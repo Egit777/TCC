@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tela_de_calculo/telaCalculo.dart';
+import 'telaCalculo.dart';
 
 class PageTabelaCalculo extends StatefulWidget {
   const PageTabelaCalculo({Key? key}) : super(key: key);
