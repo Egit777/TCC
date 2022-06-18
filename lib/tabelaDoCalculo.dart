@@ -13,27 +13,19 @@ class _PageTabelaCalculoState extends State<PageTabelaCalculo> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        elevation: 0,
+        title: Text('TABELA'),
         actions: [
-          Container(
-            height: 20,
-            width: 100,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10),
-              color: Color.fromARGB(255, 0, 0, 0),
-            ),
-            child: ElevatedButton(
-              style: TextButton.styleFrom(
-                primary: Colors.black,
-              ),
-              onPressed: () {
-                Navigator.of(context).pushReplacement(
-                    MaterialPageRoute(builder: (context) => TelaCalculo()));
-              },
-              child: const Text('>',
-                  style: TextStyle(
-                    fontSize: 20,
-                  )),
-            ),
+          IconButton(
+            icon: const Icon(Icons.arrow_right),
+            onPressed: () {
+              Navigator.of(context).pushReplacement(
+                  MaterialPageRoute(builder: (context) => TelaCalculo()));
+            },
+          ),
+          IconButton(
+            icon: const Icon(Icons.home),
+            onPressed: () {},
           ),
         ],
       ),

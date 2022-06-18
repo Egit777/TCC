@@ -33,7 +33,18 @@ class _TelaCalculoState extends State<TelaCalculo> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Calculo de Gasto'),
+        elevation: 0,
+        title: const Text('CALCULO'),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.info),
+            onPressed: () {},
+          ),
+          IconButton(
+            icon: const Icon(Icons.home),
+            onPressed: () {},
+          ),
+        ],
       ),
       body: ListView(children: [
         Column(children: [
@@ -106,7 +117,7 @@ class _TelaCalculoState extends State<TelaCalculo> {
                 color: Colors.blue,
                 width: 8,
               ),
-              borderRadius: BorderRadius.circular(12),
+              borderRadius: BorderRadius.circular(4),
             ),
             child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -129,11 +140,13 @@ class _TelaCalculoState extends State<TelaCalculo> {
                         Navigator.of(context).pushReplacement(MaterialPageRoute(
                             builder: (context) => PageTabelaCalculo()));
                       },
-                      child: const Text('SALVAR',
-                          style: TextStyle(
-                            color: Color.fromARGB(255, 255, 255, 255),
-                            fontSize: 12,
-                          )),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text('SALVAR'),
+                          Icon(Icons.save_alt_rounded),
+                        ],
+                      ),
                     ),
                   ),
                   Container(
@@ -149,34 +162,17 @@ class _TelaCalculoState extends State<TelaCalculo> {
                         Navigator.of(context).pushReplacement(MaterialPageRoute(
                             builder: (context) => PageTabelaCalculo()));
                       },
-                      child: const Text('TABELA',
-                          style: TextStyle(
-                            color: Color.fromARGB(255, 255, 255, 255),
-                            fontSize: 12,
-                          )),
-                    ),
-                  ),
-                  // HOME //
-                  Container(
-                    height: 100,
-                    child: ElevatedButton(
-                      style: TextButton.styleFrom(
-                        side: const BorderSide(
-                            width: 2.0, color: Color.fromARGB(255, 12, 12, 12)),
-                        shape: CircleBorder(),
-                        primary: const Color.fromARGB(255, 255, 254, 254),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text('TABELA'),
+                          Icon(Icons.table_chart),
+                        ],
                       ),
-                      onPressed: () {},
-                      child: const Text('HOME',
-                          style: TextStyle(
-                            color: Color.fromARGB(255, 255, 255, 255),
-                            fontSize: 15,
-                          )),
                     ),
                   ),
                 ]),
           ),
-          const SizedBox(height: 30),
         ]),
       ]),
     );
